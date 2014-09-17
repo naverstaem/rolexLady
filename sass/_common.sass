@@ -1,0 +1,382 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
+
+//body
+//  font-family: Arial, sans-serif
+//  font-size: 12px
+//  line-height: 1.4
+=pfl
+  font-family: "Conv_PFDinTextCondPro-Light"
+  font-weight: normal
+  font-style: normal
+=hsb
+  font-family: 'pf_highway_sans_probold'
+  font-weight: normal
+  font-style: normal
+=hst
+  font-family: 'pf_highway_sans_prothin'
+  font-weight: normal
+  font-style: normal
+.counter
+  width: 285px
+  text-align: center
+  position: absolute
+  left: -340px
+  top: 340px
+
+  p
+    color: #ffffff
+    margin-bottom: 5px
+    margin-top: 3px
+    font-size: 16px
+    position: static
+    font-family: 'georgiaitalic'
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: inline-block
+
+    li
+      float: left
+      margin: 0 5px
+      text-align: center
+      position: relative
+
+      span
+        position: relative
+        +text-shadow(1px 1px 1px rgba(0, 0, 0, 0.13))
+        display: block
+        font-size: 36px
+        padding: 8px 6px 8px 6px
+        font-family: 'pf_highway_sans_proregular'
+        color: white
+        +border-radius(4px)
+        +background-clip(padding-box)
+        border: solid 2px #ffffff
+
+
+
+.form
+  width: 360px
+  height: 480px
+  margin-top: 35px
+  padding: 5px
+  position: relative
+  +box
+  .caption
+    box-sizing: border-box
+    height: 120px
+    padding-top: 30px
+    +background-image(linear-gradient(to bottom left, rgba(#094f1d, .4) 0%, rgba(#094f1d,.4) 100%))
+
+
+
+
+  h3
+    margin-top: 0
+    margin-bottom: 0
+    font-size: 36px
+    font-weight: normal
+    text-align: center
+    font-family: 'Conv_PFDinTextCondPro-Thin'
+    color: #ffffff
+    text-transform: uppercase
+    line-height: 1em
+    letter-spacing: 3px
+  h4
+    margin-top: 0
+    margin-bottom: 15px
+    font-size: 24px
+    text-align: center
+    font-weight: normal
+    font-family: 'Conv_pfdintextcondpro-light'
+    color: #ffffff
+    line-height: 1em
+
+
+.frm
+  height: 355px
+  padding-top: 10px
+  +background-clip(padding-box)
+  +background-image(linear-gradient(to bottom, rgba(120,120,120,0) 0%, rgba(230,250,200,.3) 59.99%, rgba(230,250,200,.5) 100%))
+
+  //box-sizing: border-box
+  +box
+
+  .price
+    background: url(../img/price_bg.png) center center no-repeat
+    text-align: center
+    display: table
+    margin: 0 auto
+    padding-top: 25px
+    line-height: 20px
+    position: relative
+    top: -30px
+    width: 180px
+    height: 100px
+    font-size: 48px
+    color: #ffffff
+    +hst
+    +box
+    span
+      color: white
+      +pfl
+      font-size: 18px
+
+
+
+  h4
+    text-align: center
+    color: #ffffff
+    margin: 5px 0 0
+    font-weight: normal
+    font-family: 'Conv_PFDinTextCondPro-Thin'
+    font-size: 18px
+  h5
+    @extend h4
+    margin: 0
+    font-size: 24px
+    span
+      font-family: 'conv_pfdintextcondpro-light'
+form
+  margin-top: -10px
+  position: relative
+  input
+    padding-left: 20px
+    width: 280px
+    height: 50px
+    background: #ffffff
+    display: block
+    margin: auto auto 10px
+    +border-radius(4px)
+    +background-clip(padding-box)
+    +box
+    font-size: 18px
+    border: 2px solid #77a969
+
+  .radio-toolbar
+    position: absolute
+    top: -168px
+    left: -240px
+    width: 140px
+    height: 70px
+    &:after
+      position: absolute
+      content: ""
+      +s(arrow)
+      bottom: -33px
+      left: 0
+    p
+      text-align: left
+      font-family: 'georgiaitalic'
+      font-size: 16px
+      line-height: 1em
+      margin-bottom: 5px
+      margin-left: 10px
+      display: inline-block
+      color: #ffffff
+    label
+      margin-left: 11px
+    input[type='radio']
+      display: none
+    .input--first
+      position: relative
+      display: inline-block
+      width: 30px
+      height: 30px
+      +border-radius(4px)
+      +background-clip(padding-box)
+      +background-image(linear-gradient(to bottom, #fff 0%, #fff 39.99%, #777 70%, #dbdbdb 100%))
+      +box
+      &:hover
+        cursor: pointer
+    .input--second
+      +background-image(linear-gradient(to bottom, #fff 0%, #fff 39.99%, #efc795 70%, #fff5eb 100%))
+    .input--third
+      +background-image(linear-gradient(to bottom, #dbdbdb 0%, #bdbdbd 39.99%, #272727 70%, #bdbdbd 100%))
+    input[type='radio']:checked + label
+      > span
+        border: 2px solid rgba(255,255,255,.5)
+
+
+
+
+.button
+  +box
+  +border-radius(4px)
+  padding: 0 49px
+  height: 80px
+  color: #1e1e1e
+  +single-text-shadow
+  display: block
+  margin: 20px auto auto
+  +hsb
+  font-size: 36px
+  +background-clip(padding-box)
+  +border-radius(4px)
+  letter-spacing: 1px
+  +box-shadow(inset 0 -6px 0 rgba(160,120,20,.4))
+  @include background-image(linear-gradient(to bottom, #fff5af 0%, #ffbd00 100%))
+  text-decoration: none
+
+  &:hover
+    +background-image(linear-gradient(to bottom, #ffbd00 0%, #fff5af 100%))
+// common blocks      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
