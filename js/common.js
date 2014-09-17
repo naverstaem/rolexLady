@@ -12,6 +12,10 @@ head.ready(function() {
             $('.scrollMenu').slideUp();
         }
     });
+    $('.items__scrollbar').perfectScrollbar({
+        suppressScrollX: true
+    });
+
 //    jQuery(document).ready(function($) {
 //        var nav = $('.menu');
 //
