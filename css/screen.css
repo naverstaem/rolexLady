@@ -167,13 +167,13 @@ header .header__main--main .header__right:after, .scrollMenu .header__main--main
 .history__text p { color: #5a5a5a; font-size: 18px; line-height: 1.7em; }
 .history__text .button--inline { display: inline-block; padding-top: 15px; margin-top: 30px; }
 .history__watch { position: relative; float: right; margin-right: 30px; margin-top: 10px; }
-.history__watch img { width: 360px; height: 530px; }
-.history__watch .history__text-degree { position: absolute; top: 65px; left: -55px; width: 160px; height: 110px; z-index: 100; }
+.history__watch img { width: 495px; height: 530px; }
+.history__watch .history__text-degree { position: absolute; top: 65px; left: -70px; width: 160px; height: 110px; z-index: 100; }
 .history__watch .history__text-degree span { position: relative; font-family: "pf_highway_sans_prothin"; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1em; letter-spacing: 3px; padding-left: 50px; display: inline-block; }
 .history__watch .history__text-degree span:before { position: absolute; content: ""; top: 8px; left: 0; background: url('../img/icons-sef19b2065e.png') 0 0 no-repeat; width: 41px; height: 41px; }
 .history__watch .history__text-degree p { font-size: 14px; color: #5a5a5a; font-family: "conv_pfdintextcondpro-lightital"; width: 125px; }
-.history__watch .prev { position: absolute; left: -50px; top: 240px; content: ""; cursor: pointer; background: url('../img/icons-sef19b2065e.png') 0 -170px no-repeat; width: 40px; height: 40px; }
-.history__watch .next { position: absolute; right: -50px; top: 240px; content: ""; cursor: pointer; background: url('../img/icons-sef19b2065e.png') 0 -120px no-repeat; width: 40px; height: 40px; }
+.history__watch .prev { position: absolute; left: -20px; top: 240px; content: ""; cursor: pointer; background: url('../img/icons-sef19b2065e.png') 0 -170px no-repeat; width: 40px; height: 40px; }
+.history__watch .next { position: absolute; right: -20px; top: 240px; content: ""; cursor: pointer; background: url('../img/icons-sef19b2065e.png') 0 -120px no-repeat; width: 40px; height: 40px; }
 
 .our { background: url(../img/our_bg.png) center no-repeat; -moz-background-size: cover; -o-background-size: cover; -webkit-background-size: cover; background-size: cover; height: 500px; margin-top: 25px; padding-top: 60px; position: relative; *zoom: 1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-box-shadow: 0 16px 21px -11px #000000; -webkit-box-shadow: 0 16px 21px -11px #000000; box-shadow: 0 16px 21px -11px #000000; }
 .our:after { content: " "; display: table; clear: both; }
